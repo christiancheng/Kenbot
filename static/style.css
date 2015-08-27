@@ -1,0 +1,43 @@
+body {
+	background-color: rgb(235,235,235);
+	}
+h1 {
+	text-align:center;
+	}
+h2 {
+	text-align:center;
+	}	
+p {
+	text-align:center;
+	}
+h1 {
+	font-family: "Palatino Linotype", Palatino, serif;
+	font-size:200%;
+	color: rgba(51,153,255,0.85);
+	}
+h2 {
+	font-family: "Palatino Linotype", Palatino, serif;
+	font-size:175%;
+	color: rgba(51,153,255,0.85);
+	}
+p {
+	font-family: "Palatino Linotype", Palatino, serif;
+	}
+table.table th, table.table td {
+	border: 1px solid rgba(51,153,255,0.7);
+	font-family: "Palatino Linotype", Palatino, serif;
+	font-size:115%;
+	color: rgba(0,0,0,0.7);
+	}
+td {
+	padding: 20px;
+	}
+a:link {
+	color: rgba(51,153,255,0.85);
+	{
+a:visited {
+	color: rgba(51,153,255,0.5);
+	{
+a:hover {
+	color: rgba(51,153,255,0.45);
+	{
