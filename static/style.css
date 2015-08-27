@@ -41,3 +41,6 @@ a:visited {
 a:hover {
 	color: rgba(51,153,255,0.45);
 	{
+#showedClickable:start {
+    display:block;
+}
