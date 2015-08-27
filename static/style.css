@@ -23,21 +23,16 @@ h2 {
 p {
 	font-family: "Palatino Linotype", Palatino, serif;
 	}
-table.table th, table.table td {
+table, th, td, tr {
 	border-radius: 25px;
 	font-family: "Palatino Linotype", Palatino, serif;
 	font-size:115%;
 	color: rgba(0,0,0,0.7);
 	background-color: rgba(97,183,212,0.8)
 	color: white;
+	padding: 10px;
 	}
-td {
-	padding: 20px;
-	}
-th {
-	background-color: rgba(97,183,212,0.8)
-	color: white;
-}
+
 a:link {
 	color: rgba(51,153,255,0.85);
 	{
