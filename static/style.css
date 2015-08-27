@@ -1,5 +1,5 @@
 body {
-	background-color: rgb(235,235,235);
+	background-color: rgb(29,33,161);
 	}
 h1 {
 	text-align:center;
@@ -24,7 +24,7 @@ p {
 	font-family: "Palatino Linotype", Palatino, serif;
 	}
 table.table th, table.table td {
-	border: 1px solid rgba(51,153,255,0.7);
+	border-radius: 25px;
 	font-family: "Palatino Linotype", Palatino, serif;
 	font-size:115%;
 	color: rgba(0,0,0,0.7);
@@ -32,6 +32,10 @@ table.table th, table.table td {
 td {
 	padding: 20px;
 	}
+th {
+	background-color: rgba(97,183,212,0.8)
+	color: white;
+}
 a:link {
 	color: rgba(51,153,255,0.85);
 	{

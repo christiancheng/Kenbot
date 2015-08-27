@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 
-<script type="text/javascript" src="js/jquery-2.1.4.min.js">
-    $(document).ready(function() {
-            $("body").css("display", "none");
-            $("body").fadeIn(3000);
-    });
+<script type="text/javascript" src="jquery-1.4.1.min.js"></script>
+
+<script type="text/javascript" src="jquery-2.1.4.min.js">
+$(document).ready(function() {
+      $('#page-wrap').delay(500).fadeIn(3000);
+
+      $('.menu-item').click(function(event) {
+          event.preventDefault();
+          var newLocation = this.href;
+          $('#page-wrap').fadeOut(1000, function () {
+              window.location = newLocation;
+          });
+      });
+});
 </script>
 
 <html>
