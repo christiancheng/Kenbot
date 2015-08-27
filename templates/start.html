@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+
+<script type="text/javascript" src="js/jquery-2.1.4.min.js">
+    $(document).ready(function() {
+            $("body").css("display", "none");
+            $("body").fadeIn(3000);
+    });
+</script>
+
+<html>
+
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 <title>Person Guesser</title>
 
@@ -10,5 +20,7 @@
 <h2>Question 1</h2>
  <p><strong>Is the person a female?</strong>
  <br>
- <button type="button">Yes</button>	 <button type="button">No</button>	 <button type="button">It's Philip</button>	
+ <button type="button">Yes</button>	 <button type="button">No</button>
  </p>
+
+</html>
