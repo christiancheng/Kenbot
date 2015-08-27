@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
 
+<script type="text/javascript" src="jquery-2.1.4.min.js">
+$(document).ready(function() {
+      $('#page-wrap').delay(500).fadeIn(3000);
+
+      $('.menu-item').click(function(event) {
+          event.preventDefault();
+          var newLocation = this.href;
+          $('#page-wrap').fadeOut(1000, function () {
+              window.location = newLocation;
+          });
+      });
+});
+</script>
+
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
 <title>Person Guesser</title>
 
 <h1>Person Guesser</h1>
@@ -11,11 +26,12 @@
  
  <p>
  <table align="center" style="width:60%" class="table">
- <strong>Who are you thinking of?</strong>
- <br>
- <form action="/start"><button type="submit">Begin Game</button></form></p>
- <br>
- <p><a href='#showedClickable' class='clickable'>Click Me!</a></p>
+ <td>
+ <tr><strong>Who are you thinking of?</strong></tr>
+ <tr>
+ <form action="/start"><button type="submit">Begin Game</button></form></tr>
+ </td>
 </table>
+</p>
 
 </html>
