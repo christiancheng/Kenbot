@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
 
-<script type="text/javascript" src="jquery-2.1.4.min.js">
-$(document).ready(function() {
-      $('#page-wrap').delay(500).fadeIn(3000);
-
-      $('.menu-item').click(function(event) {
-          event.preventDefault();
-          var newLocation = this.href;
-          $('#page-wrap').fadeOut(1000, function () {
-              window.location = newLocation;
-          });
-      });
-});
-</script>
-
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-
+<head>
 <title>Person Guesser</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
 
-<h1>Person Guesser</h1>
-<h2>By Josh Ramos and Christian Cheng</h2>
+<body>
+
+<div id="header">
+<h1>K E N B O T </h1>
+</div>
 
  <br>
  
- <p>
- <table align="center" style="width:60%" class="table">
- <td>
- <tr><strong>Who are you thinking of?</strong></tr>
- <tr>
- <form action="/start"><button type="submit">Begin Game</button></form></tr>
- </td>
-</table>
-</p>
+ <div id="content">
+ 
+ <h2><strong>W E L C O M E &nbsp; T O &nbsp; K E N B O T</strong></h2>
+<p>Kenbot is a web application that reads your mind. Think of a person in your head, then begin the game. Kenbot will ask you a series of questions, then magically predict who you're thinking of...</p>
+<br>
+<form action="/start"><input class="button" type="submit" value="Begin Game"></form>
+<br><br>
+<minor>By Josh Ramos and Christian Cheng
+<br>
+Created for UCSD SPIS 2015</minor>
+ </div>
+ 
+<div class="corner">
+<div class="bg"></div>
+
+</div>
+
+</body>
 
 </html>
