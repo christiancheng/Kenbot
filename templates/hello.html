@@ -1,12 +1,41 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+<title>Kenbot</title>
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<title>Person Guesser</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
 
-<h1>Person Guesser</h1>
+<body>
+<script>$("body").addClass("hide");</script>
+<div id="header">
+<h1>K E N B O T </h1>
+</div>
 
-<p><strong>Who are you thinking of?</strong></p>
-
-
-<h2>By Josh Ramos and Christian Cheng</h2>
  <br>
- <p><form action="/start"><button type="submit">Begin Game</button></form></p>
+ 
+ <div id="content">
+ 
+ <h2><strong>W E L C O M E &nbsp; T O &nbsp; K E N B O T</strong></h2>
+<p>Kenbot is a web application that reads your mind. Think of a person in your head, then begin the game. Kenbot will ask you a series of questions, then magically predict who you're thinking of...</p>
+<br>
+<form action="/start"><input class="button" type="submit" value="Kenbot"></form>
+<br><br>
+<minor>By Josh Ramos and Christian Cheng
+<br>
+Created for UCSD SPIS 2015</minor>
+<br>
+<p>
+<a href="https://github.com/christiancheng/SPIS15-Project-Web-Josh-Christian" target="_blank"><img src="http://i.imgur.com/8cV4zYl.png" alt="GitHub Repo" WIDTH=32 HEIGHT=32></a>
+</p>
+ </div>
+ 
+<div class="corner">
+<div class="bg"></div>
+
+</div>
+
+</body>
+
+</html>

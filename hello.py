@@ -11,6 +11,14 @@ def hello():
 def start():
     return render_template("start.html")
     
+@app.route('/question1')
+def question1():
+	return render_template("question1.html")
+    
+# @app.route('/#showedClickable')
+# def showedClickable():
+#     return render_template(
+    
 # def ftoc(ftemp):
 #    return (ftemp-32.0)*(5.0/9.0)
 # 
