@@ -25,15 +25,6 @@ minor {
 	color: white;
 	font-size:80%;
 	}
-table, th, td, tr {
-	border-radius: 25px;
-	font-family: "Open Sans", sans-serif;
-	font-size:115%;
-	color: rgba(0,0,0,0.7);
-	background-color: rgba(97,183,212,0.8);
-	color: white;
-	padding: 10px;
-	}
 #header {
 	background-color: rgba(36,164,199,0.2);
 	border-radius:10px;
@@ -91,7 +82,7 @@ a:hover {
    text-shadow: #27a4c7 0 1px 0;
    color: #ffffff;
    font-size: 14px;
-   font-family: helvetica, serif;
+   font-family: "Open Sans", sans-serif;
    text-decoration: none;
    vertical-align: middle;
    }
