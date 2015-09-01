@@ -1,7 +1,9 @@
 import os
-from flask import Flask, url_for, render_template, request
+from flask import Flask, url_for, render_template, request, session, redirect
 
 app = Flask(__name__)
+
+app.secret_key="fadlfjh9843fherifnlkjfn3r"
 
 @app.route('/')
 def hello():
@@ -14,6 +16,20 @@ def start():
 @app.route('/question1')
 def question1():
 	return render_template("question1.html")
+	
+@app.route('/question2', methods=["post"])
+def question2():
+	session["question1"]=request.form["sex"]
+	return render_template("question2.html")
+	
+@app.route('/result', methods=["post"])
+def question3():
+	session["question2"]=request.form["role"]
+	return render_template("result.html", person=guessPerson())
+	
+def guessPerson():
+	"""Using values in session, guess who the user has in mind"""
+	return "Barack Obama"
     
 # @app.route('/#showedClickable')
 # def showedClickable():
@@ -55,4 +71,4 @@ def question1():
 ##                               showMiles=miles)
 ##
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run(port=5000, debug=True)
