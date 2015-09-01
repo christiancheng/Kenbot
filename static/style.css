@@ -123,7 +123,7 @@ a:hover {
    }
 .button1 {
    float:left;
-   margin-left:200px;
+   margin-left:30%;
    border: 0px solid #24a4c7;
    background: #27a4c7;
    background: -webkit-gradient(linear, left top, left bottom, from(#27a4c7), to(#27a4c7));
@@ -172,7 +172,7 @@ a:hover {
    }
 .button2 {
    float: right;
-   margin-right: 200px;
+   margin-right: 30%;
    border: 0px solid #24a4c7;
    background: #27a4c7;
    background: -webkit-gradient(linear, left top, left bottom, from(#27a4c7), to(#27a4c7));
@@ -222,7 +222,7 @@ a:hover {
 
 button {
    float: right;
-   margin-right:170px;
+   margin-right:30%;
    border: 0px solid #24a4c7;
    background: #27a4c7;
    background: -webkit-gradient(linear, left top, left bottom, from(#27a4c7), to(#27a4c7));
