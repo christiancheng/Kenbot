@@ -55,14 +55,14 @@ hidden {
 	}
 .corner .bg {
 	content: "";
-	background:url("robot.png") center center;
+	background:url("baymax.png") center center;
 	position: fixed;
 	z-index: -1;
 	right:0;
 	bottom:0;
 	opacity:0.6;
-	width:20%;
-	height:39%;
+	width:293px;
+	height:320px;
 	}
 a:link {
 	color: rgba(51,153,255,0.85);
