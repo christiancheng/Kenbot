@@ -4,29 +4,43 @@ from flask import Flask, url_for, render_template, request, session, redirect
 
 app = Flask(__name__)
 
-app.secret_key="fadlfjh9843fherifnlkjfn3r"
+app.secret_key='fadlfjh9843fherifnlkjfn3r'
 
 @app.route('/')
 def hello():
-    return render_template("hello.html")
+    return render_template('hello.html')
 
 @app.route('/start')
 def start():
-    return render_template("start.html")
+    return render_template('start.html')
     
 @app.route('/question1')
 def question1():
-    return render_template("question1.html")
+    return render_template('question1.html')
     
-@app.route('/question2', methods=["post"])
+@app.route('/question2', methods=['post'])
 def question2():
-    session["question1"]=request.form["sex"]
-    return render_template("question2.html")
+    session['question1']=request.form['sex']
+    return render_template('question2.html')
     
-@app.route('/result', methods=["post"])
+@app.route('/question3', methods=["post"])
 def question3():
-    session["question2"]=request.form["role"]
-    return render_template("result.html", person=guessPerson())
+    session['question2']=request.form['role']
+    return render_template('question3.html', person=guessPerson())
+
+@app.route('/question4', methods=['post'])
+def question4():
+    session['question3']=request.form['blackhair']
+    return render_template('question5', methods=["post"])
+                           
+def question5():
+    session['question4']=request.form['usesiPhone']
+    return render_template('question4.html')
+
+@app.route('/result',methods =['post'])
+def result():
+    session['question5']=request.form['noSports']
+    return render_template('result.html', person=guessPerson())
     
 def guessPerson():
     """Using values in session, guess who the user has in mind"""
