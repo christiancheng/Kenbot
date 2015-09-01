@@ -1,47 +1,16 @@
-<!DOCTYPE html>
-<html>
+{%extends "layout.html"%}
 
-<head>
-<title>Kenbot</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-</head>
+{%block title%}Question Two{%endblock%}
 
-<body>
+{%block heading%}Q U E S T I O N &nbsp; T W O{%endblock%}
 
-<div id="header">
-<a href="http://fast-beyond-4347.herokuapp.com" style="text-decoration:none;"><h1>K E N B O T </h1></a>
-</div>
+{%block content%}
 
- <br>
- 
- <div id="content">
- <div id="fader">
- <h2><strong>Q U E S T I O N &nbsp; O N E</strong></h2>
-<p>Insert Question One here.
+<p>Insert Question Two here.
 </p>
 <br>
 <!-- <form action="/start"><input class="button1" type="submit" value="Yes"></form> <form action="/start"><input class="button2" type="submit" value="No"></form> -->
-<form action="/result" method="post">Student<input type="radio" name="role" value="student">&nbsp; Mentor <input type="radio" name="role" value="mentor">&nbsp; Professor <input type="radio" name="role" value="professor"><input type="submit" value="submit"></form>
+<form action="/result" method="post">Student<input type="radio" name="role" value="SPIS Student">&nbsp; Mentor <input type="radio" name="role" value="SPIS Mentor">&nbsp; Professor <input type="radio" name="role" value="Professor or Instructor"><input type="submit" value="submit"></form>
 <br><br><br>
- </div>
- </div>
- 
- 
-<div class="corner">
-<div class="bg"></div>
 
-
-</body>
-
-<script>
-$(document).ready(function(){
-	$("#fader").fadeIn("slow");
-	$("#toggle").click(function(){
-    		$("hidden").toggle();
-    	});
-});
-</script>
-
-</html>
+{%endblock%}

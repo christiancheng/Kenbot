@@ -1,4 +1,5 @@
 import os
+import datareader
 from flask import Flask, url_for, render_template, request, session, redirect
 
 app = Flask(__name__)
@@ -29,7 +30,17 @@ def question3():
 	
 def guessPerson():
 	"""Using values in session, guess who the user has in mind"""
-	return "Barack Obama"
+	guess=datareader.People
+	newGuess=[]
+	for p in guess:
+		if p.sex==session["question1"]:
+			newGuess.append(p)
+	guess=newGuess
+	newGuess=[]
+	for p in guess:
+		if p.role==session["question2"]:
+			newGuess.append(p)
+	return str(newGuess)
     
 # @app.route('/#showedClickable')
 # def showedClickable():

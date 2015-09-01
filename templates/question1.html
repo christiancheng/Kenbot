@@ -1,47 +1,14 @@
-<!DOCTYPE html>
-<html>
+{%extends "layout.html"%}
 
-<head>
-<title>Kenbot</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-</head>
+{%block title%}Question One{%endblock%}
 
-<body>
+{%block heading%}Q U E S T I O N &nbsp; O N E{%endblock%}
 
-<div id="header">
-<a href="http://fast-beyond-4347.herokuapp.com" style="text-decoration:none;"><h1>K E N B O T </h1></a>
-</div>
+{%block content%}
 
- <br>
- 
- <div id="content">
- <div id="fader">
- <h2><strong>Q U E S T I O N &nbsp; O N E</strong></h2>
-<p>Insert Question One here.
+<p>Is the person a male?
 </p>
 <br>
-<!-- <form action="/start"><input class="button1" type="submit" value="Yes"></form> <form action="/start"><input class="button2" type="submit" value="No"></form> -->
-<form action="/question2" method="post">Male<input type="radio" name="sex" value="male">&nbsp; Female <input type="radio" name="sex" value="female"><input type="submit" value="submit"></form>
+<form action="/question2" method="post"><button class="button1" type="submit" name="sex" value="Male">Yes</button><button class="button2" type="submit" name="sex" value="Female">No</button></form>
 <br><br><br>
- </div>
- </div>
- 
- 
-<div class="corner">
-<div class="bg"></div>
-
-
-</body>
-
-<script>
-$(document).ready(function(){
-	$("#fader").fadeIn("slow");
-	$("#toggle").click(function(){
-    		$("hidden").toggle();
-    	});
-});
-</script>
-
-</html>
+{%endblock%}
