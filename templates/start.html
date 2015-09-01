@@ -1,35 +1,55 @@
 <!DOCTYPE html>
-
-<script type="text/javascript" src="jquery-1.4.1.min.js"></script>
-
-<script type="text/javascript" src="jquery-2.1.4.min.js">
-$(document).ready(function() {
-      $('#page-wrap').delay(500).fadeIn(3000);
-
-      $('.menu-item').click(function(event) {
-          event.preventDefault();
-          var newLocation = this.href;
-          $('#page-wrap').fadeOut(1000, function () {
-              window.location = newLocation;
-          });
-      });
-});
-</script>
-
 <html>
 
+<head>
+<title>Kenbot - How To Play</title>
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<title>Person Guesser</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
 
-<h1>Person Guesser</h1>
+<body>
 
-<p><strong>Who are you thinking of?</strong></p>
+<div id="header">
+<h1>K E N B O T </h1>
+</div>
 
-
-<h2>Question 1</h2>
- <p><strong>Is the person a female?</strong>
  <br>
- <button type="button">Yes</button>	 <button type="button">No</button>
- </p>
+ 
+ <div id="content">
+ <div id="fader">
+ <h2><strong>H O W &nbsp; T O &nbsp; P L A Y</strong></h2>
+<p>Think of a person. Well, almost any person. When you're ready, click <strong>Begin Game</strong> to begin. 
+<br><br>To see who Kenbot knows, click <strong>Who Does Kenbot Know?</strong>
+</p>
+<br>
+<form action="/question1"><input class="button1" type="submit" value="Begin Game"></form> &nbsp; <button id="toggle">Who Does Kenbot Know?</button>
+<br><br><br>
+<hidden><strong>Kenbot doesn't know all 7 billion (and counting) people on the planet. (We're not the NSA.) But here's a list of the people who volunteered their information to become Kenbot's friend:</strong>
+<br><br>
+Alicia, Anish, Casey, Christian, Christine, Darin, Dylan
+<br>
+Edith, Jahaziel, Jason, Jasper, Jeremy, Joel, Josh, Julia
+<br>
+Ken, Kim, Lauren, Maxwell, Megan, Monica, Mustafa
+<br>
+Neil, Niral, Sandra, Shruti, Susmitha, Yvonne, Zoe
+</hidden>
+ </div>
+ </div>
+<div class="corner">
+<div class="bg"></div>
+
+
+</body>
+
+<script>
+$(document).ready(function(){
+	$("#fader").fadeIn("slow");
+	$("#toggle").click(function(){
+    		$("hidden").toggle();
+    	});
+});
+</script>
 
 </html>
