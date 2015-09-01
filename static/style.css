@@ -44,7 +44,7 @@ hidden {
 #content {
 	background-color: rgba(5,58,89,0.6);
 	border-radius:10px;
-	padding:10px;
+	padding:10px 20px;
 	text-align:center;
 	margin: auto;
 	width: 50%;
@@ -123,7 +123,7 @@ a:hover {
    }
 .button1 {
    float:left;
-   margin-left:30%;
+   width:45%;
    border: 0px solid #24a4c7;
    background: #27a4c7;
    background: -webkit-gradient(linear, left top, left bottom, from(#27a4c7), to(#27a4c7));
@@ -171,8 +171,8 @@ a:hover {
    color: #fff;
    }
 .button2 {
-   float: right;
-   margin-right: 30%;
+   float:right;
+   width:45%;
    border: 0px solid #24a4c7;
    background: #27a4c7;
    background: -webkit-gradient(linear, left top, left bottom, from(#27a4c7), to(#27a4c7));
@@ -221,8 +221,8 @@ a:hover {
    }
 
 button {
-   float: right;
-   margin-right:30%;
+   float:right;
+   width:45%;
    border: 0px solid #24a4c7;
    background: #27a4c7;
    background: -webkit-gradient(linear, left top, left bottom, from(#27a4c7), to(#27a4c7));
