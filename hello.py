@@ -16,31 +16,31 @@ def start():
     
 @app.route('/question1')
 def question1():
-	return render_template("question1.html")
-	
+    return render_template("question1.html")
+    
 @app.route('/question2', methods=["post"])
 def question2():
-	session["question1"]=request.form["sex"]
-	return render_template("question2.html")
-	
+    session["question1"]=request.form["sex"]
+    return render_template("question2.html")
+    
 @app.route('/result', methods=["post"])
 def question3():
-	session["question2"]=request.form["role"]
-	return render_template("result.html", person=guessPerson())
-	
+    session["question2"]=request.form["role"]
+    return render_template("result.html", person=guessPerson())
+    
 def guessPerson():
-	"""Using values in session, guess who the user has in mind"""
-	guess=datareader.People
-	newGuess=[]
-	for p in guess:
-		if p.sex==session["question1"]:
-			newGuess.append(p)
-	guess=newGuess
-	newGuess=[]
-	for p in guess:
-		if p.role==session["question2"]:
-			newGuess.append(p)
-	return str(newGuess)
+    """Using values in session, guess who the user has in mind"""
+    guess=datareader.People
+    newGuess=[]
+    for p in guess:
+        if p.sex==session["question1"]:
+            newGuess.append(p)
+    guess=newGuess
+    newGuess=[]
+    for p in guess:
+        if p.role==session["question2"]:
+            newGuess.append(p)
+    return str(newGuess)
     
 # @app.route('/#showedClickable')
 # def showedClickable():
