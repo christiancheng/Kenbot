@@ -8,7 +8,7 @@ Person = namedtuple('person','name,sex,role,blackhair,glasses,basketball,track, 
                     noSports,noFacebook,playedLeague,usesiPhone,haveSiblings')
 People = []
 
-with open(home+'/Downloads/survey.csv', 'rb') as csvfile:
+with open("survey.csv", 'rb') as csvfile:
 
     datareader = csv.reader(csvfile)
     firstline = True
