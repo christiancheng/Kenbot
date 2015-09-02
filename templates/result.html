@@ -6,25 +6,39 @@
 
 {%block content%}
 
-<p>Now for the magic...You are thinking of...
+{% if len(people)==0 %}
+<p>
+<i>"The biggest hurdle is figuring out who your friends are. Your real friends."</i>
+<br><br>
+Hmmm. Kenbot can't seem to identify the person you're thinking about. Either you don't know your friends very well, or Kenbot doesn't know them at all! Feel free to play again, or check below to see exactly who Kenbot knows.
 </p>
+{% endif %}
+
+{% for p in people %}
+<p>
+Now for the magic. You are thinking of...
+</p>
+<result>
+<strong>{{ p.name }}</strong>
+</result>
+<p>Want to try again?</p>
+
+{% endfor %}
+
+
 
 <br>
+<form action="/start"><input class="button1" type="submit" value="Play Again"></form> <form action="/info"><input class="button2" type="submit" value="How does it work?"></form>
+ 
+ <br><br><br>
 
-<p>
-<ul>
-{% for p in people %}
-<li> {{ p.name }} </li>
-{% endfor %}
-</ul>
-</p>
 
 <!-- (Debug only) Contents of session: {{ session }} -->
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-	$("result").fadeIn("slow");
+	$("result").fadeIn(2000);
     	});
 });
 </script> -->

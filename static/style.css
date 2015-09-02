@@ -15,7 +15,7 @@ h2 {
 	text-align:center;
 	font-family: "Open Sans", sans-serif;
 	font-size:150%;
-	color: white;
+	color: rgb(36,164,199);
 	}	
 p {
 	text-align:center;
@@ -39,8 +39,8 @@ result {
 	display:none;
 	text-align:center;
 	font-family: "Open Sans", sans-serif;
-	color: white;
-	font-size:80%;
+	color: rgb(36,164,199);
+	font-size:140%;
 	}
 #header {
 	background-color: rgba(36,164,199,0.2);
