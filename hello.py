@@ -26,16 +26,16 @@ def question2():
 @app.route('/question3', methods=["post"])
 def question3():
     session['question2']=request.form['role']
-    return render_template('question3.html', person=guessPerson())
+    return render_template('question3.html')
 
 @app.route('/question4', methods=['post'])
 def question4():
     session['question3']=request.form['blackhair']
-    return render_template('question5', methods=["post"])
+    return render_template('question4.html')
                            
 def question5():
     session['question4']=request.form['usesiPhone']
-    return render_template('question4.html')
+    return render_template('question5.html')
 
 @app.route('/result',methods =['post'])
 def result():
@@ -54,47 +54,23 @@ def guessPerson():
     for p in guess:
         if p.role==session["question2"]:
             newGuess.append(p)
+    guess=newGuess
+    newGuess=[]
+    for p in guess:
+        if p.blackhair==session["question3"]:
+            newGuess.append(p)
+    guess=newGuess
+    newGuess=[]
+    for p in guess:
+        if p.usesiPhone==session["question4"]:
+            newGuess.append(p)
+    guess=newGuess
+    newGuess=[]
+    for p in guess:
+        if p.noSports==session["question5"]:
+            newGuess.append(p)
     print str(newGuess)
     return newGuess
-    
-# @app.route('/#showedClickable')
-# def showedClickable():
-#     return render_template(
-    
-# def ftoc(ftemp):
-#    return (ftemp-32.0)*(5.0/9.0)
-# 
-# @app.route('/ftoc/<ftempString>')
-# def convertFtoC(ftempString):
-#     ftemp = 0.0
-#     try:
-#         ftemp = float(ftempString)
-#         ctemp = ftoc(ftemp)
-#         return "In Farenheit: " + ftempString + " In Celsius " + str(ctemp) 
-#     except ValueError:
-#         return "Sorry.  Could not convert " + ftempString + " to a number"
-# 
-##def miles(miles):
-##    return (miles/0.62137)
-##
-##@app.route('/milesToKm')
-##def milesToKm():
-##    return render_template('milesToKm.html')
-##
-##@app.route('/doMilesToKm')
-##def doMilesToKm():
-##    
-##    try:
-##        miles = float(request.args['miles'])
-##        km = miles(miles)
-##        return render_template('milesConvertResult.html',
-##                               showMiles=miles,
-##                               showKm=km)
-##    
-##    except ValueError:
-##        return "bar"
-##        return render_template('couldNotConvert.html',
-##                               showMiles=miles)
-##
+
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
