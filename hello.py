@@ -6,6 +6,8 @@ app = Flask(__name__)
 
 app.secret_key='fadlfjh9843fherifnlkjfn3r'
 
+app.jinja_env.globals.update(len=len)
+
 @app.route('/')
 def hello():
     return render_template('hello.html')
@@ -33,6 +35,7 @@ def question4():
     session['question3']=request.form['blackhair']
     return render_template('question4.html')
                            
+@app.route('/question5', methods=['post'])
 def question5():
     session['question4']=request.form['usesiPhone']
     return render_template('question5.html')
