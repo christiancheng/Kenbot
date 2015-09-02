@@ -95,27 +95,27 @@ def guessPerson():
     guess=newGuess
     newGuess=[]
     for p in guess:
-        if p.noSports==session["question5"]:
+        if p.track==session["question5"]:
             newGuess.append(p)
     guess=newGuess
     newGuess=[]
     for p in guess:
-        if p.noSports==session["question6"]:
+        if p.glasses==session["question6"]:
             newGuess.append(p)
     guess=newGuess
     newGuess=[]
     for p in guess:
-        if p.noSports==session["question7"]:
+        if p.playedLeague==session["question7"]:
             newGuess.append(p)
     guess=newGuess
     newGuess=[]
     for p in guess:
-        if p.noSports==session["question8"]:
+        if p.haveSiblings==session["question8"]:
             newGuess.append(p)
     guess=newGuess
     newGuess=[]
     for p in guess:
-        if p.noSports==session["question9"]:
+        if p.basketball==session["question9"]:
             newGuess.append(p)
     guess=newGuess
     newGuess=[]
