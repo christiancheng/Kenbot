@@ -35,6 +35,13 @@ hidden {
 	color: white;
 	font-size:80%;
 	}
+result {
+	display:none;
+	text-align:center;
+	font-family: "Open Sans", sans-serif;
+	color: white;
+	font-size:80%;
+	}
 #header {
 	background-color: rgba(36,164,199,0.2);
 	border-radius:10px;
