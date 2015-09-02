@@ -5,9 +5,16 @@
 {%block heading%}R E S U L T{%endblock%}
 
 {%block content%}
-
-You are thinking of...{{ person }}
-
+{%  if len(person)>1%}
+Couldn't narrow down to one person. Here are the people you may be thinking of.
+<ul>
+{% for p in people%}
+<li> {{ p }} </li>
+{% endfor %}
+</ul>
+{% else %}
+You are thinking of...{{ people[0] }}
+{% endif %}
 Contents of session: {{ session }}
 
 {%endblock%}

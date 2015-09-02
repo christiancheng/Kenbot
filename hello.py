@@ -40,7 +40,7 @@ def question5():
 @app.route('/result',methods =['post'])
 def result():
     session['question5']=request.form['noSports']
-    return render_template('result.html', person=guessPerson())
+    return render_template('result.html', people=guessPerson())
     
 def guessPerson():
     """Using values in session, guess who the user has in mind"""
@@ -54,7 +54,8 @@ def guessPerson():
     for p in guess:
         if p.role==session["question2"]:
             newGuess.append(p)
-    return str(newGuess)
+    print str(newGuess)
+    return newGuess
     
 # @app.route('/#showedClickable')
 # def showedClickable():
