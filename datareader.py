@@ -25,7 +25,12 @@ with open("survey.csv", 'rb') as csvfile:
 if __name__ == '__main__':
     print People
 
+##nothing in list
+##try again
+##play again (if correct)
+##change result page
+##speech bubbles kenbot?
+##mehtod to add people? implementation
 
-
-
+    
 
