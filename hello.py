@@ -27,7 +27,7 @@ def question2():
     
 @app.route('/question3', methods=["post"])
 def question3():
-    session['question2']=request.form['role']
+    session['question2']=request.form['student']
     return render_template('question3.html')
 
 @app.route('/question4', methods=['post'])
@@ -40,9 +40,34 @@ def question5():
     session['question4']=request.form['usesiPhone']
     return render_template('question5.html')
 
+@app.route('/question6', methods=['post'])
+def question6():
+    session['question5']=request.form['track']
+    return render_template('question6.html')
+
+@app.route('/question7', methods=['post'])
+def question7():
+    session['question6']=request.form['glasses']
+    return render_template('question7.html')
+
+@app.route('/question8', methods=['post'])
+def question8():
+    session['question7']=request.form['playedLeague']
+    return render_template('question8.html')
+
+@app.route('/question9', methods=['post'])
+def question9():
+    session['question8']=request.form['haveSiblings']
+    return render_template('question9.html')
+
+@app.route('/question10', methods=['post'])
+def question10():
+    session['question9']=request.form['basketball']
+    return render_template('question10.html')
+
 @app.route('/result',methods =['post'])
 def result():
-    session['question5']=request.form['noSports']
+    session['question10']=request.form['noSports']
     return render_template('result.html', people=guessPerson())
     
 def guessPerson():
@@ -55,7 +80,7 @@ def guessPerson():
     guess=newGuess
     newGuess=[]
     for p in guess:
-        if p.role==session["question2"]:
+        if p.student==session["question2"]:
             newGuess.append(p)
     guess=newGuess
     newGuess=[]
@@ -71,6 +96,31 @@ def guessPerson():
     newGuess=[]
     for p in guess:
         if p.noSports==session["question5"]:
+            newGuess.append(p)
+    guess=newGuess
+    newGuess=[]
+    for p in guess:
+        if p.noSports==session["question6"]:
+            newGuess.append(p)
+    guess=newGuess
+    newGuess=[]
+    for p in guess:
+        if p.noSports==session["question7"]:
+            newGuess.append(p)
+    guess=newGuess
+    newGuess=[]
+    for p in guess:
+        if p.noSports==session["question8"]:
+            newGuess.append(p)
+    guess=newGuess
+    newGuess=[]
+    for p in guess:
+        if p.noSports==session["question9"]:
+            newGuess.append(p)
+    guess=newGuess
+    newGuess=[]
+    for p in guess:
+        if p.noSports==session["question10"]:
             newGuess.append(p)
     print str(newGuess)
     return newGuess
