@@ -12,6 +12,7 @@ app.jinja_env.globals.update(len=len)
 def hello():
     return render_template('hello.html')
 
+
 @app.route('/start')
 def start():
     return render_template('start.html')
@@ -73,6 +74,11 @@ def question10():
 def result():
     session['question10']=request.form['noSports']
     return render_template('result.html', people=guessPerson())
+
+@app.route('/result2',methods=['post'])
+def result2():
+    session('result']=request.form['result']
+    return render_template('result2.html')                               
     
 def guessPerson():
     """Using values in session, guess who the user has in mind"""
