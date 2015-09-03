@@ -15,6 +15,10 @@ def hello():
 @app.route('/start')
 def start():
     return render_template('start.html')
+
+@app.route('/info')
+def info():
+    return render_template('info.html')
     
 @app.route('/question1')
 def question1():
