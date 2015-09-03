@@ -1,0 +1,27 @@
+{%extends "layout.html"%}
+
+{%block title%}Information{%endblock%}
+
+{%block heading%}A B O U T &nbsp; K E N B O T{%endblock%}
+
+{%block content%}
+
+<p>
+<strong>How does Kenbot work?</strong>
+<br><br>
+The backend (behind the scenes) portion of Kenbot relies on a Python algorithm that scrapes information provided in a participation form. A list containing ten variables (each of which is assigned boolean values) is created for each person. As the Kenbot user answers questions about their person, the Python algorithm searches through the database for persons who match the user's answers, and appends these matching persons to the final result list. After ten questions, the properties of the person are unique enough that the final result list contains only one person.
+<br><br>
+The frontend (what you see) portion of Kenbot uses jQuery and Flask along with the standard HTML and CSS. CSS is used to style the fonts, headers, buttons, and content boxes, along with the background and corner graphics. jQuery is used for the fading animations and hidden information toggles. Flask converts the Python code into a usable format for the web app.
+</p>
+
+
+
+<br>
+<form action="/"><input class="button1" type="submit" value="Kenbot Home"></form>
+
+<form action="https://docs.google.com/forms/d/1fvHYOQiszK2xQotmZJ0EoVYetXbwV3AyNk1oiFSbQpM/viewform?c=0&w=1" target="_blank"><input class="button2" type="submit" value="Add yourself to Kenbot"></form>
+ 
+ <br><br><br>
+
+{%endblock%}
+
