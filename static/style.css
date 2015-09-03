@@ -72,13 +72,13 @@ result {
 	height:320px;
 	}
 a:link {
-	color: rgba(51,153,255,0.85);
+	color: rgb(36,164,199);
 }
 a:visited {
-	color: rgba(51,153,255,0.5);
+	color: rgb(36,164,199);
 }
 a:hover {
-	color: rgba(51,153,255,0.45);
+	color: #3c8cba;
 }
 
 .button {
