@@ -77,8 +77,8 @@ def result():
 
 @app.route('/result2',methods=['post'])
 def result2():
-    session('result']=request.form['result']
-    return render_template('result2.html')                               
+    session['result']=request.form['result']
+    return render_template('result2.html', people=guessPerson())                               
     
 def guessPerson():
     """Using values in session, guess who the user has in mind"""

@@ -1,0 +1,40 @@
+{%extends "layout.html"%}
+
+{%block title%}Result{%endblock%}
+
+{%block heading%}R E S U L T{%endblock%}
+
+{%block content%}
+
+{% for p in people[1:2] %}
+<p>
+Kenbot is never wrong. You must be thinking of...
+</p>
+<result>
+<strong>{{ p.name }}</strong>
+</result>
+<p>Want to try again?</p>
+
+<br>
+<form action="/start"><input class="button" type="submit" value="Play Again"></form>
+ 
+ <br><br>
+ 
+{% endfor %}
+
+
+
+
+
+<!-- (Debug only) Contents of session: {{ session }} -->
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("result").fadeIn(2000);
+    	});
+});
+</script> -->
+
+{%endblock%}
+

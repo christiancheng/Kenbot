@@ -6,14 +6,46 @@
 
 {%block content%}
 
+{% if len(people)==2 %}
+{% for p in people[0:1] %}
+<p>My spidey senses tell me you're thinking of...</p>
+<result>
+<strong>{{ p.name }}</strong>
+</result>
+<p>Want to try again?</p>
+<br><br>
+<form action="/start"><input class="button1" type="submit" value="Play Again"></form>
+<form action="/result2" method="post"><button class="button2" type="submit" name="result" value="">Wait - you're wrong...</button></form>
+ 
+ <br><br><br>
+{% endfor %}
+{% endif %}
+
 {% if len(people)==0 %}
 <p>
 <i>"The biggest hurdle is figuring out who your friends are. Your real friends."</i>
 <br><br>
 Hmmm. Kenbot can't seem to identify the person you're thinking about. Either you don't know your friends very well, or Kenbot doesn't know them at all! Feel free to play again, or check below to see exactly who Kenbot knows.
 </p>
+<br>
+<form action="/start"><input class="button1" type="submit" value="Play Again"></form>
+&nbsp; <button id="toggle">Who Does Kenbot Know?</button>
+ <br><br><br>
+ <hidden><strong>Make sure the person you're thinking of is on this list:</strong>
+<br><br>
+Alicia, Anish, Casey, Christian, Christine, Darin, Dylan
+<br>
+Edith, Jahaziel, Jason, Jasper, Jeremy, Joel, Josh, Julia
+<br>
+Ken, Kim, Lauren, Maxwell, Megan, Monica, Mustafa
+<br>
+Neil, Niral, Sandra, Shruti, Susmitha, Yvonne, Zoe
+<br><br>
+<strong>If you would like to be added to Kenbot's database sometime in the future, please fill out <a href="http://goo.gl/forms/dUUoKk5prV" style="text-decoration:none;" target="_blank">this form.</a></strong>
+</hidden>
 {% endif %}
 
+{% if len(people)==1 %}
 {% for p in people %}
 <p>
 Now for the magic. You are thinking of...
@@ -23,15 +55,17 @@ Now for the magic. You are thinking of...
 </result>
 <p>Want to try again?</p>
 
-{% endfor %}
-
-
-
 <br>
-<form action="/start"><input class="button1" type="submit" value="Play Again"></form>
-<form action="/info"><input class="button2" type="submit" value="How does it work?"></form>
+<form action="/start"><input class="button" type="submit" value="Play Again"></form>
  
- <br><br><br>
+ <br><br>
+ 
+{% endfor %}
+{% endif %}
+
+
+
+
 
 <!-- (Debug only) Contents of session: {{ session }} -->
 
