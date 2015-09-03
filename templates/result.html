@@ -13,7 +13,7 @@
 <strong>{{ p.name }}</strong>
 </result>
 <p>Want to try again?</p>
-<br><br>
+
 <form action="/start"><input class="button1" type="submit" value="Play Again"></form>
 <form action="/result2" method="post"><button class="button2" type="submit" name="result" value="">Wait - you're wrong...</button></form>
  
@@ -55,10 +55,10 @@ Now for the magic. You are thinking of...
 </result>
 <p>Want to try again?</p>
 
-<br>
+
 <form action="/start"><input class="button" type="submit" value="Play Again"></form>
  
- <br><br>
+<br>
  
 {% endfor %}
 {% endif %}
