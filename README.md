@@ -1,5 +1,7 @@
-# SPIS15-Project-Web-Josh-Christian
+# Kenbot
 
-Kenbot: http://spiskenbot.herokuapp.com
+View Kenbot at: http://spiskenbot.herokuapp.com
 
-For our final web app project, we are creating an online game where the user will think of a person, and the computer will guess who the person is by asking a series of yes or no questions. The person in mind must be a SPIS student, professor, or mentor. We are planning to use a sorting algorithm to eliminate persons based on the questions asked. Once all but one person have been eliminated, the remaining person will be presented as the computer's answer.
+Written using: Python, HTML5, CSS, jQuery, Flask
+
+Kenbot was created as Christian Cheng and Josh Ramos's final web app project for UC San Diego's Summer Program for Incoming Students. The user thinks of a person, and Kenbot guesses who this person is, by asking a series of yes/no questions (similarly to the common game, "20 Questions"). The person in mind must be a SPIS student, professor, or mentor. The program was written over the course of one week.
